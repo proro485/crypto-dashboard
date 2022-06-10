@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Cryptocurrencies from './components/Cryptocurrencies';
 import Home from './components/Home';
 import Sidebar from './components/Sidebar';
 
@@ -10,7 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<></>} />
-        <Route path="/crypto" element={<></>} />
+        <Route path="/crypto" element={<Cryptocurrencies />} />
       </Routes>
     </div>
   );
