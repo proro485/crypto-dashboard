@@ -1,6 +1,5 @@
 import React from 'react';
 import { Rings } from 'react-loader-spinner';
-import { Link } from 'react-router-dom';
 import truncate from 'truncate';
 import { useGetNewsQuery } from '../features/newsApi/newsApi';
 
