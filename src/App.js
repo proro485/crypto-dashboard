@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Cryptocurrencies from './components/Cryptocurrencies';
 import Home from './components/Home';
+import News from './components/News';
 import Sidebar from './components/Sidebar';
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
       <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/news" element={<></>} />
+        <Route path="/news" element={<News />} />
         <Route path="/crypto" element={<Cryptocurrencies />} />
       </Routes>
     </div>
