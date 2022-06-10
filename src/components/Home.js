@@ -1,5 +1,6 @@
 import millify from 'millify';
 import React from 'react';
+import { Rings } from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../features/cryptoApi/cryptoApi';
 
@@ -9,9 +10,10 @@ const Home = () => {
   const coins = data?.data?.coins;
 
   return (
-    <div className="w-full bg-gray-50">
+    <div className="w-full mt-24 md:mt-0 md:ml-72">
       <GlobalStats globalStats={globalStats} isFetching={isFetching} />
-      <CryptoCardsList coins={coins} />
+      <CryptoCardsList coins={coins} isFetching={isFetching} />
+      <div className="h-6"></div>
     </div>
   );
 };
@@ -57,8 +59,7 @@ const GlobalStatsData = ({ name, data }) => {
   );
 };
 
-const CryptoCardsList = ({ coins }) => {
-  console.log(coins);
+const CryptoCardsList = ({ coins, isFetching }) => {
   return (
     <div className="mx-4 md:mx-10 mt-2 sm:mt-0">
       <div className="flex items-center justify-between mb-4">
@@ -69,15 +70,21 @@ const CryptoCardsList = ({ coins }) => {
           </div>
         </Link>
       </div>
-      <div className="grid grid-cols-auto-fit-card gap-x-4 gap-y-4">
-        {coins.map((coin, index) => {
-          return (
-            <div key={index}>
-              <CryptoCard coin={coin} index={index} />
-            </div>
-          );
-        })}
-      </div>
+      {isFetching ? (
+        <div className="flex justify-center items-center h-full w-full">
+          <Rings color="gray" />
+        </div>
+      ) : (
+        <div className="grid grid-cols-auto-fit-card gap-x-4 gap-y-4">
+          {coins.map((coin, index) => {
+            return (
+              <div key={index}>
+                <CryptoCard coin={coin} index={index} />
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };
