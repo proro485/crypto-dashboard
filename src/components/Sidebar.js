@@ -7,7 +7,7 @@ const Sidebar = () => {
   const location = useLocation().pathname;
 
   return (
-    <div className="md:h-full fixed top-0">
+    <div className="md:h-full w-full md:w-fit fixed top-0">
       <div className="flex flex-col items-center md:h-full md:w-72 bg-gray-900 text-white">
         <Logo />
         <SidebarLinks location={location} />
