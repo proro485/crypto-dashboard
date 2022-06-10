@@ -115,7 +115,7 @@ const NewsCardsList = ({ newsList, isFetching }) => {
     <div className="mx-4 md:mx-10 mt-2 sm:mt-0 pt-6 sm:pt-10">
       <div className="flex items-center justify-between mb-4">
         <div className="text-2xl md:text-3xl font-semibold">Crypto News</div>
-        <Link to="/crypto">
+        <Link to="/news">
           <div className="text-base sm:text-lg font-semibold text-blue-900">
             Show All
           </div>
