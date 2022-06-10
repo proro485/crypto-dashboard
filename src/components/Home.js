@@ -145,12 +145,12 @@ const NewsCard = ({ news }) => {
     <a href={`${news.url}`} target="_blank">
       <div className="h-80 pb-4 bg-gray-50 shadow-md shadow-gray-400 rounded-sm cursor-pointer">
         <img
-          src={news.image.thumbnail.contentUrl}
+          src={news?.image?.thumbnail.contentUrl}
           alt={news.name}
           className="w-full h-40 rounded-t-sm"
         />
         <div className="px-4 pt-2 font-medium text-lg">
-          {truncate(news.name, 50)}
+          {truncate(news.name, 40)}
         </div>
         <div className="px-5 pt-2">{truncate(news.description, 80)}</div>
       </div>
