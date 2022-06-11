@@ -1,46 +1,19 @@
-# Getting Started with Create React App and Redux
+# Exercism Frontend Developer Job: Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This is the Frontend of Crypto Dashboard page made with React, styled with TailwindCSS, used Redux Toolkit Query for fetching and RapidAPI for getting data.
+<div>
+<a href="https://exercism-testimonials-c7270.web.app/">Crypto Dashboard</a>
+</div>
 
-## Available Scripts
+## Some Screenshots
+### Website on Desktops
+![Screenshot from 2022-06-11 13-09-49](https://user-images.githubusercontent.com/72189840/173178685-a600daf4-769c-4117-b957-4316aa6c3547.png)
+![Screenshot from 2022-06-11 13-09-59](https://user-images.githubusercontent.com/72189840/173178688-7a703f26-507f-4c71-ab89-e76f9d261da9.png)
+![Screenshot from 2022-06-11 13-10-09](https://user-images.githubusercontent.com/72189840/173178691-603805b1-e80d-4790-9ea1-b3db8b9ac3cb.png)
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Website on Mobile Phones
+<p>
+  <img src="https://user-images.githubusercontent.com/72189840/173178700-bc3fcc55-b9b6-45a3-b4e8-7da383236c90.png" width="270" height="600"/>
+  <img src="https://user-images.githubusercontent.com/72189840/173178703-b91a51f1-ce31-4dfc-95d4-cb7460c925bf.png" width="270" height="600"/>
+  <img src="https://user-images.githubusercontent.com/72189840/173178704-3c661666-b511-4dc6-8f14-069fbd88598e.png" width="270" height="600"/>
+</p>
