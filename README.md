@@ -1,4 +1,4 @@
-# Exercism Frontend Developer Job: Project
+# Crypto Dashboard
 
 This is the Frontend of Crypto Dashboard page made with React, styled with TailwindCSS, used Redux Toolkit Query for fetching and RapidAPI for getting data.
 <div>
