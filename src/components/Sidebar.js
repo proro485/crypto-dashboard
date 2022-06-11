@@ -37,7 +37,7 @@ const SidebarLinks = ({ location }) => {
       />
       <SidebarLink
         name="Cryptocurrencies"
-        selected={location === '/crypto'}
+        selected={location.split('/')[1] === 'crypto'}
         icon={<AttachMoney fontSize="small" />}
       />
       <SidebarLink

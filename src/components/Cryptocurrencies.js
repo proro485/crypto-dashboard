@@ -1,6 +1,7 @@
 import millify from 'millify';
 import React, { useEffect, useState } from 'react';
 import { Rings } from 'react-loader-spinner';
+import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../features/cryptoApi/cryptoApi';
 
 const Cryptocurrencies = () => {
@@ -56,16 +57,18 @@ const CryptoCardsList = ({ coins, isFetching }) => {
 
 const CryptoCard = ({ coin, index }) => {
   return (
-    <div className="pb-4 bg-gray-50 border shadow-md shadow-gray-400 rounded-sm cursor-pointer">
-      <div className="flex justify-between items-center px-5 py-2 border-b border-gray-300">
-        <div className="text-lg">{`${index + 1}. ${coin.name}`}</div>
-        <img src={coin.iconUrl} alt={coin.name} className="w-10 h-10" />
+    <Link to={`/crypto/${coin.uuid}`}>
+      <div className="pb-4 bg-gray-50 border shadow-md shadow-gray-400 rounded-sm cursor-pointer">
+        <div className="flex justify-between items-center px-5 py-2 border-b border-gray-300">
+          <div className="text-lg">{`${index + 1}. ${coin.name}`}</div>
+          <img src={coin.iconUrl} alt={coin.name} className="w-10 h-10" />
+        </div>
+        <div className="px-5 pt-4">Price: {millify(coin.price)}</div>
+        <div className="px-5 pt-2">Symbol: {coin.symbol}</div>
+        <div className="px-5 pt-2">Market Cap: {millify(coin.marketCap)}</div>
+        <div className="px-5 pt-2">Daily Change: {millify(coin.change)}%</div>
       </div>
-      <div className="px-5 pt-4">Price: {millify(coin.price)}</div>
-      <div className="px-5 pt-2">Symbol: {coin.symbol}</div>
-      <div className="px-5 pt-2">Market Cap: {millify(coin.marketCap)}</div>
-      <div className="px-5 pt-2">Daily Change: {millify(coin.change)}%</div>
-    </div>
+    </Link>
   );
 };
 
