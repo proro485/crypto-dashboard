@@ -33,23 +33,23 @@ const GlobalStats = ({ globalStats, isFetching }) => {
       <div className="grid sm:grid-cols-auto-fit grid-cols-auto-fit-sm gap-2 sm:gap-4">
         <GlobalStatsData
           name="Cryptocurrencies"
-          data={isFetching ? '-' : millify(globalStats.total)}
+          data={isFetching ? '-' : millify(globalStats?.total || '0')}
         />
         <GlobalStatsData
           name="Exchanges"
-          data={isFetching ? '-' : millify(globalStats.totalExchanges)}
+          data={isFetching ? '-' : millify(globalStats?.totalExchanges || '0')}
         />
         <GlobalStatsData
           name="Market Cap"
-          data={isFetching ? '-' : millify(globalStats.totalMarketCap)}
+          data={isFetching ? '-' : millify(globalStats?.totalMarketCap || '0')}
         />
         <GlobalStatsData
           name="24h Volume"
-          data={isFetching ? '-' : millify(globalStats.total24hVolume)}
+          data={isFetching ? '-' : millify(globalStats?.total24hVolume || '0')}
         />
         <GlobalStatsData
           name="Markets"
-          data={isFetching ? '-' : millify(globalStats.totalMarkets)}
+          data={isFetching ? '-' : millify(globalStats?.totalMarkets || '0')}
         />
       </div>
     </div>
@@ -103,10 +103,14 @@ const CryptoCard = ({ coin, index }) => {
           <div className="text-lg">{`${index + 1}. ${coin.name}`}</div>
           <img src={coin.iconUrl} alt={coin.name} className="w-10 h-10" />
         </div>
-        <div className="px-5 pt-4">Price: {millify(coin.price)}</div>
-        <div className="px-5 pt-2">Symbol: {coin.symbol}</div>
-        <div className="px-5 pt-2">Market Cap: {millify(coin.marketCap)}</div>
-        <div className="px-5 pt-2">Daily Change: {millify(coin.change)}%</div>
+        <div className="px-5 pt-4">Price: {millify(coin?.price || '0')}</div>
+        <div className="px-5 pt-2">Symbol: {coin.symbol || 'NAN'}</div>
+        <div className="px-5 pt-2">
+          Market Cap: {millify(coin?.marketCap || '0')}
+        </div>
+        <div className="px-5 pt-2">
+          Daily Change: {millify(coin?.change || '0')}%
+        </div>
       </div>
     </Link>
   );
