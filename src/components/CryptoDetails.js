@@ -1,6 +1,6 @@
 import React from 'react';
 import parse from 'html-react-parser';
-import { AttachMoney, Link } from '@mui/icons-material';
+import { Link } from '@mui/icons-material';
 import { Rings } from 'react-loader-spinner';
 import { useLocation } from 'react-router-dom';
 import { useGetCryptoQuery } from '../features/cryptoApi/cryptoApi';
