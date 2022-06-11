@@ -2,7 +2,7 @@
 
 This is the Frontend of Crypto Dashboard page made with React, styled with TailwindCSS, used Redux Toolkit Query for fetching and RapidAPI for getting data.
 <div>
-<a href="https://exercism-testimonials-c7270.web.app/">Crypto Dashboard</a>
+<a href="https://crypto-dashboard-5df35.web.app/">Crypto Dashboard</a>
 </div>
 
 ## Some Screenshots
